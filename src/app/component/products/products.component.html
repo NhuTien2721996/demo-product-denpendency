@@ -1,0 +1,19 @@
+
+<div class="container">
+  <button class="btn btn-primary" routerLink="/products/moto/create"><i class="fa fa-plus-circle"></i> Thêm mới</button>
+</div>
+<div class="container">
+  <div class="row product">
+    <div class="col-4" *ngFor="let product of listProducts; let i=index">
+      <div class="card" style="width: 18rem;">
+        <img src="{{product.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-title" style="color: red">{{product.price}}</p>
+          <button  type="button" class="btn btn-danger" (click)="delete(i)"><i class="fa fa-trash"></i> Delete</button>
+          <button  type="button" class="btn btn-primary" [routerLink]="['/products/moto', i,'edit']"><i class="fa fa-edit"></i> Edit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

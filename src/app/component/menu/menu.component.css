@@ -1,0 +1,12 @@
+.container img {
+  height: 40px;
+  width: 150px;
+  background-color: red;
+}
+
+.panner {
+  background-color: red;
+}
+.navbar a{
+  color: white;
+}
